@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.zard21;
+
+option java_package = "com.zard21.model.proto";
+option java_outer_classname = "CountryModels";
+
+message Country {
+    int32 id        = 1;
+    string name     = 2;
+    Status status   = 3;
+
+    enum Status {
+        ENABLE  = 0;
+        DISABLE = 1;
+    }
+}
